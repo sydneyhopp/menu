@@ -2,18 +2,53 @@ h1, h2 {
     text-align: center;
 }
 
-#main {
-    background-color: pink;
+#page {
+    background-color: #FFFDE7;
+    margin: 10%;
+    padding-top: 5%;
+    padding-left:2%;
+    padding-right:2%;
 }
 
-#sidebar {
-    background-color: purple;
+#sidebox {
+    background-color: #C57B57; 
+    border-radius: 15%;
+    justify-content: center;
+}
+
+.menu-item {
+    border: 10px solid rgba(59, 129, 131, .75);
+    border-radius: 15%;
+    padding: 10px;
+}
+
+.item-text {
+    text-align: center;
+}
+
+
+/* mobile only styling */
+/* desktop styling */
+@media (max-width: 699px){
+    h1 {
+        font-size: 50px;
+    }
+    .desktop-only {
+        display: none;
+    }
+    .item-image {
+        display: none;
+    }
 }
 
 /* desktop styling */
 @media (min-width: 700px){
+    h2 {
+        font-size: 50px;
+    }
     #container {
         display: flex;
+        gap: 5%;
     }
     #main {
         width: 60%;
@@ -21,4 +56,91 @@ h1, h2 {
     #sidebar {
         width: 40%;
     }
+
+    .menu-item {
+        display: flex;
+        justify-content: center;
+    }
+    .item-text {
+        width: 60%;
+        align-items: center;
+    }
+    .item-pic {
+        width: 40%;
+    }
+    .item-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 10%;
+        object-fit: cover;
+    }
 }
+
+@property --a{
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+  }
+  @property --p {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+  }
+  @property --c1 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #000;
+  }
+  @property --c2 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #000;
+  }
+  
+  html {
+    --s: 80px;
+    --_g: #0000, var(--c1) 2deg calc(var(--a) - 2deg),#0000 var(--a);
+    background: 
+      conic-gradient(from calc(-45deg  - var(--a)/2) at top    var(--p) left  var(--p),var(--_g)),
+      conic-gradient(from calc(-45deg  - var(--a)/2) at top    var(--p) left  var(--p),var(--_g)),
+      conic-gradient(from calc( 45deg  - var(--a)/2) at top    var(--p) right var(--p),var(--_g)),
+      conic-gradient(from calc( 45deg  - var(--a)/2) at top    var(--p) right var(--p),var(--_g)),
+      conic-gradient(from calc(-135deg - var(--a)/2) at bottom var(--p) left  var(--p),var(--_g)),
+      conic-gradient(from calc(-135deg - var(--a)/2) at bottom var(--p) left  var(--p),var(--_g)),
+      conic-gradient(from calc( 135deg - var(--a)/2) at bottom var(--p) right var(--p),var(--_g)),
+      conic-gradient(from calc( 135deg - var(--a)/2) at bottom var(--p) right var(--p),var(--_g))
+      var(--c2);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+    animation: m 2s infinite alternate linear;
+  }
+  
+  @keyframes m {
+    0%,15% {
+      --a: 135deg;
+      --p: 20%;
+      --c1: #3B8183;
+      --c2: #FAD089;
+      background-position: 0 0,var(--s) var(--s);
+    }
+    45%,50% {
+      --a: 90deg;
+      --p: 25%;
+      --c1: #3B8183;
+      --c2: #FAD089;
+      background-position: 0 0,var(--s) var(--s);
+    }
+    50.01%,55% {
+      --a: 90deg;
+      --p: 25%;
+      --c2: #3B8183;
+      --c1: #FAD089;
+      background-position: var(--s) 0,0 var(--s);
+    }
+    85%,100% {
+      --a: 135deg;
+      --p: 20%;
+      --c2: #3B8183;
+      --c1: #FAD089;
+      background-position: var(--s) 0,0 var(--s);
+    }
+  }
