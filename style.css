@@ -8,12 +8,15 @@ h1, h2 {
     padding-top: 5%;
     padding-left:2%;
     padding-right:2%;
+    padding-bottom: 5%;
 }
 
 #sidebox {
     background-color: #C57B57; 
-    border-radius: 15%;
+    border-radius: 5%;
     justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .menu-item {
@@ -53,7 +56,7 @@ h1, h2 {
     #main {
         width: 60%;
     }
-    #sidebar {
+    #sidebox {
         width: 40%;
     }
 
