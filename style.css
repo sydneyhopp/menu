@@ -15,8 +15,8 @@ h1, h2 {
     background-color: #C57B57; 
     border-radius: 5%;
     justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 5%;
+    color: white;
 }
 
 .menu-item {
@@ -24,6 +24,13 @@ h1, h2 {
     border-radius: 15%;
     padding: 10px;
 }
+
+.side-menu-item {
+    border: 10px solid white;
+    border-radius: 15%;
+    padding: 10px;
+}
+
 
 .item-text {
     text-align: center;
@@ -64,12 +71,18 @@ h1, h2 {
         display: flex;
         justify-content: center;
     }
+
+    .side-menu-item {
+        display: flex;
+        justify-content: center;
+    }
     .item-text {
         width: 60%;
         align-items: center;
     }
     .item-pic {
         width: 40%;
+        height: 40%
     }
     .item-image {
         width: 100%;
