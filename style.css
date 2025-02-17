@@ -15,7 +15,9 @@ h1, h2 {
     background-color: #C57B57; 
     border-radius: 5%;
     justify-content: center;
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
     color: white;
 }
 
