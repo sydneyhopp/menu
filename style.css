@@ -16,6 +16,11 @@ h1, h2 {
     color: #FFFDE7;
 }
 
+#mode-button {
+    display: flex;
+    justify-content: center;
+}
+
 #sidebox {
     background-color: #C57B57; 
     border-radius: 5%;
