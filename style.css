@@ -11,6 +11,11 @@ h1, h2 {
     padding-bottom: 5%;
 }
 
+.dark-mode {
+    background-color:#C57B57 !important;
+    color: #FFFDE7;
+}
+
 #sidebox {
     background-color: #C57B57; 
     border-radius: 5%;
@@ -51,6 +56,10 @@ h1, h2 {
     .item-image {
         display: none;
     }
+    #sidebox {
+        padding-top: 5%;
+    }
+    
 }
 
 /* desktop styling */
